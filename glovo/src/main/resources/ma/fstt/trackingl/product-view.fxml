@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="447.0" prefWidth="829.0" style="-fx-background-color: #463601;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.ProductController">
+   <children>
+      <Label layoutX="332.0" layoutY="-13.0" text="Produits" textFill="#f2d166">
+         <font>
+            <Font name="Dyuthi Regular" size="50.0" />
+         </font></Label>
+      <Pane layoutX="21.0" layoutY="70.0" prefHeight="285.0" prefWidth="320.0" style="-fx-background-color: #947b27;">
+         <children>
+            <Label fx:id="Nom" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="57.0" text="Nom" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="Description" layoutX="14.0" layoutY="73.0" prefHeight="26.0" prefWidth="134.0" text="Description" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="Quantite" layoutX="14.0" layoutY="191.0" prefHeight="26.0" prefWidth="101.0" text="Quantité" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="Prix" layoutX="14.0" layoutY="236.0" prefHeight="26.0" prefWidth="57.0" text="Prix" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="description" layoutX="139.0" layoutY="62.0" prefHeight="94.0" prefWidth="165.0" />
+            <TextField fx:id="nom" layoutX="142.0" layoutY="15.0" prefHeight="24.0" prefWidth="165.0" />
+            <TextField fx:id="quantite" layoutX="139.0" layoutY="192.0" prefHeight="24.0" prefWidth="165.0" />
+            <TextField fx:id="prix" layoutX="139.0" layoutY="237.0" prefHeight="24.0" prefWidth="165.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="mytable" layoutX="377.0" layoutY="94.0" onMousePressed="#tableClick" prefHeight="238.0" prefWidth="438.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="25.0" text="ID" />
+          <TableColumn fx:id="col_nom" prefWidth="99.0" text="nom" />
+            <TableColumn fx:id="col_description" prefWidth="161.0" text="description" />
+            <TableColumn fx:id="col_qty" minWidth="5.0" prefWidth="71.0" text="quantite" />
+            <TableColumn fx:id="col_prix" prefWidth="81.0" text="prix" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajouter" layoutX="21.0" layoutY="379.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #947b27;" text="Ajouter" textFill="#fcf8f8" />
+      <Button fx:id="modifier" layoutX="147.0" layoutY="379.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #947b27;" text="Modifier" textFill="#fcf8f8" />
+      <Button fx:id="supprimer" layoutX="276.0" layoutY="379.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #947b27;" text="Supprimer" textFill="#fcf8f8" />
+      <Button fx:id="annuler" layoutX="404.0" layoutY="379.0" mnemonicParsing="false" onAction="#reset" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #947b27;" text="Annuler" textFill="#fcf8f8" />
+      <Button fx:id="back" layoutX="714.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackToMenu" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #947b27;" text="précédent" textFill="#fcf8f8" />
+   </children>
+</AnchorPane>

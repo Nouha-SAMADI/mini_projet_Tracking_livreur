@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="767.0" style="-fx-background-color: #463601;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.HelloController">
+   <children>
+      <Label layoutX="268.0" prefHeight="67.0" prefWidth="163.0" text="Livreurs" textFill="#f2d166">
+         <font>
+            <Font name="Dyuthi Regular" size="50.0" />
+         </font>
+      </Label>
+      <Pane layoutX="14.0" layoutY="78.0" prefHeight="176.0" prefWidth="322.0" style="-fx-background-color: #947b27;">
+         <children>
+            <Label fx:id="Nom" layoutX="24.0" layoutY="31.0" prefHeight="34.0" prefWidth="52.0" text="Nom" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="Telephone" layoutX="14.0" layoutY="111.0" text="Telephone" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nom" layoutX="143.0" layoutY="36.0" />
+            <TextField fx:id="tele" layoutX="143.0" layoutY="112.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="mytable" layoutX="379.0" layoutY="78.0" onMousePressed="#tableClick" prefHeight="176.0" prefWidth="357.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="45.0" text="ID" />
+          <TableColumn fx:id="col_nom" prefWidth="126.0" text="nom" />
+            <TableColumn fx:id="col_tele" prefWidth="160.0" text="telephone" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajouter" layoutX="21.0" layoutY="272.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #947b27;" text="Ajouter" textFill="#fcf8f8" />
+      <Button fx:id="modifier" layoutX="136.0" layoutY="272.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #947b27;" text="Modifier" textFill="#fcf8f8" />
+      <Button fx:id="supprimer" layoutX="244.0" layoutY="272.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #947b27;" text="Supprimer" textFill="#fcf8f8" />
+      <Button fx:id="annuler" layoutX="350.0" layoutY="272.0" mnemonicParsing="false" onAction="#reset" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #947b27;" text="Annuler" textFill="#fcf8f8" />
+      <Button fx:id="back" layoutX="657.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackToMenu" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #947b27;" text="précédent" textFill="#fcf8f8" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="651.0" style="-fx-background-image: url('Glovito.png');" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.MenuController">
+   <children>
+      <Button fx:id="livreur" layoutX="18.0" layoutY="347.0" mnemonicParsing="false" onAction="#afficherLivreurs" prefHeight="40.0" prefWidth="185.0" style="-fx-background-color: #947b27;" text="Livreurs" textFill="#463601">
+         <font>
+            <Font name="Droid Sans Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="commande" layoutX="236.0" layoutY="347.0" mnemonicParsing="false" onAction="#afficherCommandes" prefHeight="40.0" prefWidth="185.0" style="-fx-background-color: #947b27;" text="Commandes" textFill="#463601">
+         <font>
+            <Font name="Droid Sans Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="produit" layoutX="452.0" layoutY="347.0" mnemonicParsing="false" onAction="#afficherProduits" prefHeight="40.0" prefWidth="185.0" style="-fx-background-color: #947b27;" text="Produits" textFill="#463601">
+         <font>
+            <Font name="Droid Sans Bold" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

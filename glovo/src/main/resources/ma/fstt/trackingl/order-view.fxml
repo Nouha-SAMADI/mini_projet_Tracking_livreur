@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="489.0" prefWidth="914.0" style="-fx-background-color: #463601;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.OrderController">
+   <children>
+      <Label layoutX="349.0" layoutY="-2.0" prefHeight="71.0" prefWidth="202.0" text="Commandes" textFill="#f2d166">
+         <font>
+            <Font name="Dyuthi Regular" size="38.0" />
+         </font>
+      </Label>
+      <Pane layoutX="16.0" layoutY="62.0" prefHeight="317.0" prefWidth="325.0" style="-fx-background-color: #947b27;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="82.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="59.0" prefHeight="38.0" prefWidth="261.0" text="Adresse livraison" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="148.0" prefHeight="38.0" prefWidth="119.0" text="Produit" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <TextField fx:id="adresse" layoutX="14.0" layoutY="105.0" prefHeight="24.0" prefWidth="299.0" />
+            <DatePicker fx:id="date" layoutX="88.0" layoutY="21.0" />
+            <ChoiceBox fx:id="produit" layoutX="145.0" layoutY="155.0" onMouseClicked="#addProduit" prefWidth="150.0" />
+         </children></Pane>
+      <Button fx:id="ajouter" layoutX="16.0" layoutY="407.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="48.0" prefWidth="107.0" style="-fx-background-color: #947b27;" text="Ajouter" textFill="WHITE" />
+      <Button fx:id="modifier" layoutX="147.0" layoutY="407.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="107.0" style="-fx-background-color: #947b27;" text="Modifier" textFill="WHITE" />
+      <Button fx:id="supprimer" layoutX="277.0" layoutY="407.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="107.0" style="-fx-background-color: #947b27;" text="Supprimer" textFill="WHITE" />
+      <Button fx:id="annuler" layoutX="404.0" layoutY="407.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="107.0" style="-fx-background-color: #947b27;" text="Annuler" textFill="WHITE" />
+      <Button fx:id="back" layoutX="774.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBackToMenu" prefHeight="48.0" prefWidth="107.0" style="-fx-background-color: #947b27;" text="précédent" textFill="WHITE" />
+      <TableView fx:id="mytable" layoutX="384.0" layoutY="95.0" onMousePressed="#tableClick" prefHeight="287.0" prefWidth="519.0">
+        <columns>
+          <TableColumn fx:id="id_commande" prefWidth="86.0" text="IdCommande" />
+          <TableColumn fx:id="date_col" prefWidth="118.0" text="date" />
+            <TableColumn fx:id="adrLiv" prefWidth="141.0" text="adrs_livraison" />
+            <TableColumn fx:id="id_produit" prefWidth="77.0" text="idProduit" />
+            <TableColumn fx:id="nom" prefWidth="95.0" text="nomProduit" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
